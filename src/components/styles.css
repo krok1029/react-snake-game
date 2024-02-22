@@ -1,0 +1,153 @@
+#snakes-game-container {
+  background-color: #cecacf;
+  min-height: 100vh;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.high-score {
+  background-color: #ff7e5f;
+  color: black;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  width: fit-content;
+  margin-inline: auto;
+  margin-top: 1rem;
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
+}
+
+.score {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 900;
+  margin-block: 1rem;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.score > span {
+  color: black;
+  padding-block: 0.5rem;
+  padding-inline: 1rem 0.3rem;
+}
+
+.new-game-hint {
+  text-align: center;
+  color: black;
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.pause-hint {
+  text-align: center;
+  font-style: italic;
+  color: #333;
+}
+
+.pause-hint kbd {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background-color: #766c6c;
+  color: salmon;
+  border-radius: 0.5rem;
+}
+
+#game-over-modal-container {
+  position: fixed;
+  inset: 0;
+  outline: 1px solid red;
+  background-color: #feb47b;
+  /* cursor: pointer; */
+}
+
+#game-over-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+
+  width: 700px;
+  height: 300px;
+
+  display: grid;
+  place-content: center;
+  text-align: center;
+  border-radius: 10px;
+
+  box-shadow: 0 0 10px 5px black, 0 0 100px 10px black;
+}
+
+#game-over-modal > h2 {
+  font-size: 4em;
+}
+
+#game-over-modal > button {
+  font-size: larger;
+  width: fit-content;
+  margin: 10px auto;
+  padding: 5px 10px;
+  border: 1px solid #feb47b;
+  color: black;
+  border-radius: 8px;
+  background: white;
+}
+
+.final-score {
+  font-size: 1.3em;
+}
+
+.final-score > span {
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.congratulate {
+  margin-block: 0.5rem;
+  font-size: 1.5rem;
+  background-color: #f3904f;
+  color: white;
+  padding-inline: 0.5rem;
+  font-weight: 900;
+  border-radius: 1rem;
+}
+
+#paused-modal-container {
+  position: fixed;
+  inset: 0;
+  background-color: hsla(0, 0%, 10%, 0.7);
+
+  cursor: pointer;
+}
+
+#paused-modal {
+  width: 500px;
+  height: 300px;
+  background-color: #f3904f;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-content: center;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+#paused-modal > h2 {
+  font-size: 3rem;
+}
+
+#paused-modal > .click-dir {
+  color: white;
+}
+
+.click-dir {
+  color: hsl(0, 0%, 30%);
+  font-style: italic;
+  font-size: 1.3rem;
+}
