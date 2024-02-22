@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SnakeBoard from "@/components/SnakesBoard";
 import GameOverModal from "@/components/GameOverModal";
 import PausedModal from "@/components/PausedModal";
@@ -15,21 +15,23 @@ const SnakesGame = () => {
 
   const toggleIsPlaying = () => setIsPlaying((perv) => !perv);
 
-  window.onkeydown = (e) => {
-    switch (e.key) {
-      case "Enter":
-        if (isIdle || isGameOver) {
-          setIsPlaying(true);
-          setIsIdle(false);
-          setIsGameOver(false);
-          setScore(0);
-        }
-        break;
-      case "Escape":
-        toggleIsPlaying();
-        break;
-    }
-  };
+  useEffect(() => {
+    window.onkeydown = (e) => {
+      switch (e.key) {
+        case "Enter":
+          if (isIdle || isGameOver) {
+            setIsPlaying(true);
+            setIsIdle(false);
+            setIsGameOver(false);
+            setScore(0);
+          }
+          break;
+        case "Escape":
+          toggleIsPlaying();
+          break;
+      }
+    };
+  }, []);
 
   return (
     <div id="snakes-game-container">
