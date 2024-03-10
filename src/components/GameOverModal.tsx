@@ -21,7 +21,7 @@ const GameOverModal: React.FC<GameOverModal> = ({ finalScore }) => {
           <p className="congratulate">🏆 You beat the high score! 🏆</p>
         )}
         <p>
-          Press <kbd>Enter</kbd> to pause
+          Press <kbd>Enter</kbd> to restart
         </p>
       </div>
     </div>

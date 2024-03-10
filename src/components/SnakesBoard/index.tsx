@@ -44,7 +44,7 @@ const SnakeBoard: React.FC<SnakeGameBoard> = ({
       );
       const { snake } = snakes.current;
 
-      window.onkeydown = (e) => {
+      window.addEventListener("keydown", (e) => {
         switch (e.key) {
           case "w":
           case "ArrowUp":
@@ -63,7 +63,7 @@ const SnakeBoard: React.FC<SnakeGameBoard> = ({
             snake.changeMovement(SnakeMovements.Left);
             break;
         }
-      };
+      });
     }
 
     return () => {

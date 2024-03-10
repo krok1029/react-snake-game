@@ -16,7 +16,7 @@ const SnakesGame = () => {
   const toggleIsPlaying = () => setIsPlaying((perv) => !perv);
 
   useEffect(() => {
-    window.onkeydown = (e) => {
+    window.addEventListener("keydown", (e) => {
       switch (e.key) {
         case "Enter":
           if (isIdle || isGameOver) {
@@ -30,7 +30,7 @@ const SnakesGame = () => {
           toggleIsPlaying();
           break;
       }
-    };
+    });
   }, []);
 
   return (
