@@ -39,7 +39,7 @@ const SnakesGame = () => {
 
       {isIdle ? (
         <p className="new-game-hint">
-          Press <kbd>Enter</kbd> to pause
+          Press <kbd>Enter</kbd> to restart
         </p>
       ) : (
         <>
